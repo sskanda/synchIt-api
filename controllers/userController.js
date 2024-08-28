@@ -1,5 +1,5 @@
 const User = require("../models/User");
-const Post = require("../models/post");
+const Post = require("../models/Post");
 const register = async (req, res) => {
   try {
     const { username, email, password } = req.body;
