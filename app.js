@@ -5,6 +5,7 @@ const app = express();
 const posts = require("./routes/posts");
 const users = require("./routes/users");
 const comments = require("./routes/comments");
+const views = require("./routes/views");
 
 // Middleware to parse JSON bodies
 app.use(bodyParser.json());
@@ -29,6 +30,7 @@ app.get("/api/status", (req, res) => {
 app.use("/api/posts", posts);
 app.use("/api/users", users);
 app.use("/api/comments", comments);
+app.use("/api/views", views);
 
 // MongoDB Connection and Server Start
 const uri = `mongodb+srv://skz:admin@cluster0.c7xj5qh.mongodb.net/socialX?retryWrites=true&w=majority&appName=Cluster0`;
